@@ -1,0 +1,283 @@
+/* fonts */
+@font-face {
+  font-family: 'Angelia';
+  src: local('Angelia Beauty'), url('../fonts/Angelia\ Beauty.woff2'), format("woff2");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedHands';
+  src: local('KGRedHands'), url('../fonts/KGRedHands.woff2'), format("woff2");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+@font-face {
+  font-family: 'RedHands-outline';
+  src: local('KGRedHandsOutline'), url('../fonts/KGRedHandsOutline.woff2'), format("woff2");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+  font-family: 'Floraison-des-Amours';
+  src: local('Floraison des Amours'), url('../fonts/Floraison\ des\ Amours.woff2'), format("woff2");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+/* general */
+
+html{
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+body{
+    min-width: 320px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+
+    background-color: #ffdfc7;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+
+:root{
+  --height: 10px;
+  --font-size-title: 4rem;
+  --font-size-text: 24px;
+}
+
+/* glob */
+.list-reset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+.btn-reset{
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+  
+.flex{
+  display: flex;
+}
+  
+/* index */
+
+.intro-container{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  
+}
+
+.intro-section{
+  min-width: 320px;
+  margin: 0;
+  align-items:center;
+  flex-direction: column;
+}
+
+.valentines-title{
+  margin: 0;
+  font-family: Angelia;
+  font-size: var(--font-size-title);
+  line-height: calc(var(--font-size-title)*1.5);
+  text-align: center;
+  color: #3C2123;
+}
+
+.btn-list{
+  width: 70%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.btn{
+  font-family: RedHands;
+  border-radius: 25px;
+  font-size: 1rem;
+  box-shadow: 0 10px 5px #f7829433;
+  color: #FAE8E8;
+}
+
+.accept-btn{
+  margin-right: 10px;
+  padding: 10px 30px;
+
+  background-color: #F78294;
+  outline: 2px solid #fd7388;
+  box-shadow: 0 10px 5px #ff7b8383;
+}
+
+.deny-btn{
+  padding: 10px 25px;
+  background-color: #FAE8E8;
+
+  font-size: 10px;
+  letter-spacing: calc(10px * 0.16);
+  color: #3C2123;
+}
+
+/* letter */
+
+.letter-container{
+  display: flex;
+  min-width: 350px;
+  min-height: 100dvh;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-section{
+  z-index: 5;
+  position: sticky;
+  margin: 0 auto;
+  margin: 20px 10px;
+  padding: 40px 15px;
+
+  background-color: #FAE8E8;
+
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #f7829433;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.letter-section.visible{
+  opacity: 1;
+}
+
+.letter-title{
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: Floraison-des-Amours, sans-serif;
+  text-align: center;
+
+}
+
+.letter-text{
+  height: auto;
+  width: auto;
+  margin: 0 10px;
+  font-family: Floraison-des-Amours, sans-serif;
+  font-size: var(--font-size-text);
+  line-height: calc(var(--font-size-text)*1.3);
+  word-spacing: calc(var(--font-size-text)*0.16);
+  text-align: center;
+}
+
+.letter-signature-text{
+  margin: 0 10px;
+  margin-top: 10px;
+  text-align: right;
+  font-family: Floraison-des-Amours, sans-serif;
+  font-size: var(--font-size-text);
+}
+
+.paper{
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+
+  transform: rotate(5deg);
+  border-radius: 5px;
+  background-color: #FAE8E8;
+  background-image: url("../images/paper.jpg");
+  background-size: 200%;
+  box-shadow: 5px 5px 10px #3e31329d;
+}
+
+.paper2{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  border-radius: 5px;
+  background-color: #FAE8E8;
+  background-image: url("../images/paper.jpg");
+  background-size: 200%;
+  box-shadow: 5px 5px 10px #3e31329d;
+}
+
+
+.rose{
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  max-width: 200px;
+  height: auto;
+}
+
+.rose2{
+  position: absolute;
+  top: -40px;
+  right: -50px;
+  max-width: 200px;
+  height: auto;
+
+  transform: rotate(-90deg);
+}
+
+/* envelope */
+
+.envelope-container{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto;
+  
+}
+
+.envelope-section{
+  min-width: 320px;
+  min-height: calc(320px * 0.6615);
+
+  background-image: url("../images/envelope.jpg");
+  background-size: cover;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.envelope-text{
+  margin-bottom: 30px;
+  font-family: Angelia, sans-serif;
+}
+
+.envelope-btn{
+  padding: 10px 25px;
+  background-color: #fae8e8d6;
+
+  border: 1px solid #ffdfc7;
+
+  font-size: 10px;
+  letter-spacing: calc(10px * 0.16);
+  color: #3C2123;
+}
